@@ -18,8 +18,7 @@ export class SignupComponent {
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private authService: AuthService,
-    private router: Router){
-      
+    private router: Router){   
   }
 
   ngOnInit(): void {
