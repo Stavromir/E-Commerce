@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth/auth.service';
+import { UserStorageService } from '../services/storage/user-storage.service';
 
 
 
@@ -40,6 +41,11 @@ export class LoginComponent {
 
     this.authService.login(username, password).subscribe(
       (response) => {
+        if(UserStorageService.isAdminLoggedIn) {
+          return this.router.navigateByUrl('admin/dashboard');
+        } else if(UserStorageService.isCustomerLoggedIn) {
+          return this.router.navigateByUrl('customer/dashboard');
+        }
         this.snackBar.open('Login Success', 'OK', {duration: 500})
       },
       (error) => {
