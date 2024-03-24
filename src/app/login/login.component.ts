@@ -42,9 +42,9 @@ export class LoginComponent {
     this.authService.login(username, password).subscribe(
       (res) => {
         if(UserStorageService.isAdminLoggedIn()) {
-          return this.router.navigateByUrl('admin/dashboard');
+          return this.router.navigateByUrl('/admin/dashboard');
         } else {
-          return this.router.navigateByUrl('customer/dashboard');
+          return this.router.navigateByUrl('/customer/dashboard');
         }
       },
       (error) => {
