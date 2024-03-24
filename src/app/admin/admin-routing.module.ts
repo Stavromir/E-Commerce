@@ -4,8 +4,8 @@ import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent }
-  { path: 'dashboard', component: DashboardComponent }
+  { path: '', component: AdminComponent },
+  { path: 'dashboard', component: DashboardComponent },
 
 ];
 

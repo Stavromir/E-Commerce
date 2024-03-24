@@ -40,19 +40,17 @@ export class LoginComponent {
     const password = this.loginForm.get('password')!.value;
 
     this.authService.login(username, password).subscribe(
-      (response) => {
-        if(UserStorageService.isAdminLoggedIn) {
+      (res) => {
+        if(UserStorageService.isAdminLoggedIn()) {
           return this.router.navigateByUrl('admin/dashboard');
-        } else if(UserStorageService.isCustomerLoggedIn) {
+        } else {
           return this.router.navigateByUrl('customer/dashboard');
         }
-        this.snackBar.open('Login Success', 'OK', {duration: 500})
       },
       (error) => {
-        this.snackBar.open('Bad credentials', 'ERROR', {duration: 500})
+        this.snackBar.open('Bad credentials', 'ERROR', {duration: 500});
       }
     )
-    
   }
 
 }
