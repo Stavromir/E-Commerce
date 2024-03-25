@@ -7,6 +7,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
     exports: [
@@ -18,7 +20,9 @@ import {MatSelectModule} from '@angular/material/select';
         MatInputModule,
         FormsModule,
         ReactiveFormsModule,
-        MatSelectModule
+        MatSelectModule,
+        MatListModule, 
+        MatDividerModule,
     ]
 })
 
