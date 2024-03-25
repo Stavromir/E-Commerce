@@ -16,10 +16,21 @@
                 </div>
                 <div class="info-row">
                     <span class="info-label">Category: </span>
-                    <span class="info-value">${{ product.categoryName }}</span>
+                    <span class="info-value">{{ product.categoryName }}</span>
                 </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="actions">
+                <button mat-raised-button color="primary" class="update-buton"
+                    [routerLink]="'/admin/faq/' + product.id">FAQ</button>
+                <button mat-raised-button color="accent" class="update-buton"
+                    [routerLink]="'/admin/product/' + product.id">Update</button>
+                <button mat-raised-button color="warn" class="delete-buton">
+                    DELETE 
+                </button>
             </div>
         </div>
     </mat-card>
-
 </div>
