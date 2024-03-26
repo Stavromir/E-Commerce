@@ -16,7 +16,7 @@ export class DashboardComponent {
   constructor(
     private adminService: AdminService,
     private fb: FormBuilder,
-    private scnakBar: MatSnackBar,
+    private snackBar: MatSnackBar,
   ) {}
 
   ngOnInit(){
@@ -53,12 +53,12 @@ export class DashboardComponent {
 
   deleteProduct(productId: any) {
     this.adminService.deleteProduct(productId).subscribe(
-      (res) => {
-        if(res.body == null) {
-          this.scnakBar.open('Product Deleted Successfully', 'Close', {duration: 5000});
+      res => {
+        if(res === null) {
+          this.snackBar.open('Product Deleted Successfully', 'Close', {duration: 5000});
           this.getAllProducts();
         } else {
-          this.scnakBar.open(res.message, 'Close', {duration: 5000, panelClass: 'error-snackbar'});
+          this.snackBar.open(res.message, 'Close', {duration: 5000, panelClass: 'error-snackbar'});
         }
       }
     )
