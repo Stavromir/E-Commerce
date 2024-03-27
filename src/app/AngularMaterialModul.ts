@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
-
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
     exports: [
         MatToolbarModule,
@@ -23,6 +23,7 @@ import {MatListModule} from '@angular/material/list';
         MatSelectModule,
         MatListModule, 
         MatDividerModule,
+        MatDialogModule,
     ]
 })
 
