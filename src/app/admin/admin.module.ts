@@ -6,6 +6,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AngularMaterialModul } from '../AngularMaterialModul';
 import { PostCategoryComponent } from './components/post-category/post-category.component';
 import { PostProductComponent } from './components/post-product/post-product.component';
+import { PostCouponeComponent } from './components/post-coupone/post-coupone.component';
+import { CouponsComponent } from './components/coupons/coupons.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { PostProductComponent } from './components/post-product/post-product.com
     AdminComponent,
     DashboardComponent,
     PostCategoryComponent,
-    PostProductComponent
+    PostProductComponent,
+    PostCouponeComponent,
+    CouponsComponent
   ],
   imports: [
     CommonModule,
