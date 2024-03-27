@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'category', component: PostCategoryComponent },
   { path: 'product', component: PostProductComponent },
-  { path: 'post-coupone', component: PostCouponeComponent },
+  { path: 'post-coupon', component: PostCouponeComponent },
   { path: 'coupons', component: CouponsComponent },
 
 ];

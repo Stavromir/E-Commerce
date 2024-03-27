@@ -3,11 +3,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AdminService } from 'app/admin/service/admin.service';
+import {provideNativeDateAdapter} from '@angular/material/core';
 
 @Component({
   selector: 'app-post-coupone',
   templateUrl: './post-coupone.component.html',
-  styleUrl: './post-coupone.component.scss'
+  styleUrl: './post-coupone.component.scss',
+  providers: [provideNativeDateAdapter()],
 })
 export class PostCouponeComponent {
 
