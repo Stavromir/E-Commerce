@@ -49,7 +49,4 @@ export class PostCouponeComponent {
       this.couponForm.markAllAsTouched();
     }
   }
-
-
-
 }
