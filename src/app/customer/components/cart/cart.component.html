@@ -18,7 +18,7 @@
                                 <mat-icon>remove_circle_outline</mat-icon>
                             </button>
                             <span class="quantity">{{ item.quantity }}</span>
-                            <button mat-icon-button>
+                            <button mat-icon-button (click)="increaseQuantity(item.productId)">
                                 <mat-icon>add_circle_outline</mat-icon>
                             </button>
                         </div>
@@ -31,6 +31,9 @@
         </div>
         <div class="total-price">
             Amount: {{order.amount | currency}}
+        </div>
+        <div class="total-price" *ngIf="order.couponName != null">
+            Coupon Applied: {{order.couponName}}
         </div>
         <div>
             <button mat-raised-button color="primary">Place Order</button>

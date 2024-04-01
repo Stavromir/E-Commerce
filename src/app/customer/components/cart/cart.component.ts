@@ -36,9 +36,13 @@ export class CartComponent {
   applyCoupon(){
     this.customerService.applyCoupon(this.couponForm.get(['code'])!.value).subscribe(
       res => {
-        this.snackBar.open("Coupon applied successfully!", 'Close', {duration: 5000});
-        this.getCart();
-      }
+        if(res.id != null) {
+          this.snackBar.open("Coupon applied successfully!", 'Close', {duration: 5000});
+          this.getCart();
+        } else {
+          this.snackBar.open(res.message, 'ERROR', {duration: 5000})
+        }
+      } 
     )
   }
 
@@ -53,6 +57,15 @@ export class CartComponent {
             element.processedImg = 'data:image/jpeg;base64,' + element.returnedImg;
             this.cartItems.push(element);
           })
+      }
+    )
+  }
+
+  increaseQuantity(productId: any) {
+    this.customerService.increaseProductQuantity(productId).subscribe(
+      res => {
+        this.snackBar.open("Quantity increased successfully!", 'Close', {duration: 5000});
+          this.getCart();
       }
     )
   }
