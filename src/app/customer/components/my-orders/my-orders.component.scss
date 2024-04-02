@@ -1,0 +1,39 @@
+// Styling for the ng-container
+.ng-container {
+    // Add your styles here for the ng-container
+  }
+  
+  // Styling for the mat-table
+  .mat-elevation-z8 {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Styling for the mat-header-cell
+  .mat-header-cell {
+    font-weight: bolder;
+    color: #4caf50; // Green color
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  // Styling for the mat-cell
+  .mat-cell {
+    font-size: 14px;
+    color: #333; // Dark gray color
+  }
+  
+  // Styling for the mat-header-row
+  .mat-header-row {
+    background-color: #f0f0f0; // Light gray background color
+  }
+  
+  // Styling for the mat-row
+  .mat-row {
+    &:hover {
+      background-color: #f9f9f9; // Lighter hover background color
+    }
+  }
+  
