@@ -10,6 +10,7 @@ import { PostCouponeComponent } from './components/post-coupone/post-coupone.com
 import { CouponsComponent } from './components/coupons/coupons.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { CreateProductFaqComponent } from './components/create-product-faq/create-product-faq.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CreateProductFaqComponent } from './components/create-product-faq/creat
     PostCouponeComponent,
     CouponsComponent,
     OrdersComponent,
-    CreateProductFaqComponent
+    CreateProductFaqComponent,
+    UpdateProductComponent
   ],
   imports: [
     CommonModule,

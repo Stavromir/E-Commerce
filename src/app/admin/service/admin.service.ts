@@ -30,8 +30,22 @@ export class AdminService {
     })
   }
 
+  updateProduct(productDto:any, productId: any): Observable<any> {
+    const id = productId;
+    productDto.id = id;
+    return this.http.put(BASIC_URL + '/api/admin/product/update', productDto, {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
   getAllProducts(): Observable<any> {
     return this.http.get(BASIC_URL + '/api/admin/products', {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  getProductsById(productId: number): Observable<any> {
+    return this.http.get(BASIC_URL + `/api/admin/product/${productId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
