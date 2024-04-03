@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from 'app/customer/services/customer.service';
+import { UserStorageService } from 'app/services/storage/user-storage.service';
 
 @Component({
   selector: 'app-view-product-detail',
@@ -25,6 +26,22 @@ export class ViewProductDetailComponent {
 
   ngOnInit(){
     this.getProductDetailsById();
+  }
+
+  addProductToWishList(){
+    const wishListDto = {
+      productId: this.productId,
+      userId: UserStorageService.getUserId(),
+    }
+    this.customerService.addProductToWishList(wishListDto).subscribe(
+      res => {
+        this.snackbar.open('Product added to wishlist seccessfully', 'Close', {duration: 5000});
+      },
+      error => {
+        let errorMessage = `${error.status} \ ${error.error}`
+        this.snackbar.open(errorMessage, 'Clsoe', {duration: 5000});
+      }
+    )
   }
 
 
