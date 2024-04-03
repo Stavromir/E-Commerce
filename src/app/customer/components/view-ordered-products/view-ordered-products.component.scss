@@ -1,0 +1,82 @@
+.ordered-product-container {
+    .ordered-product {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        padding: 20px;
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+
+            .product-image {
+                margin-right: 20px;
+                border-radius: 5px;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+                img {
+                    max-width: 100px;
+                    height: auto;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .product-details {
+                flex-grow: 1;
+
+                .item-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 5px;
+                }
+
+                .item-name {
+                    font-weight: bold;
+                    font-size: 22px;
+                    color: #333;
+                }
+
+                .item-price,
+                .item-quantity {
+                    color: #777;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .action-button {
+            margin-left: 10%;
+            margin-right: 10%;
+
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+            }
+        }
+    }
+
+    .total-price {
+        text-align: right;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 20px;
+        color: #333;
+    }
+}

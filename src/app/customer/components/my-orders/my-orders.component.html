@@ -41,7 +41,7 @@
             <mat-header-cell *matHeaderCellDef style="font-weight: bolder; color: rgb(96, 98, 194);">
             Action </mat-header-cell>
             <mat-cell *matCellDef="let myOrder">
-                <span *ngIf="myOrder.status == 'Delivered'">
+                <span *ngIf="myOrder.orderStatus == 'PLACED' || myOrder.orderStatus == 'DELIVERED'">
                     <button mat-raised-button color="primary" class="buton"
                     [routerLink]="'/customer/ordered_products/' + myOrder.id">Review</button>
                 </span>
