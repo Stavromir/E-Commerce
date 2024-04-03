@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'placeOrder', component: PlaceOrderComponent },
   { path: 'myOrders', component: MyOrdersComponent },
   { path: 'ordered_products/:orderId', component: ViewOrderedProductsComponent },
-  { path: 'review/:productId', component: ReviewOrderedProductComponent },
+  { path: 'review/:orderId/:productId', component: ReviewOrderedProductComponent },
 
   
 ];

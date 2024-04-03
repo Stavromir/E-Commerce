@@ -9,7 +9,7 @@ import { CustomerService } from 'app/customer/services/customer.service';
 })
 export class ViewOrderedProductsComponent {
 
-  orderID: number = this.activatedRoute.snapshot.params['orderId'];
+  orderId: number = this.activatedRoute.snapshot.params['orderId'];
 
   orderedProducts: any[] = [];
   orderAmount: number;
@@ -25,7 +25,7 @@ export class ViewOrderedProductsComponent {
   }
 
   getOrderedProductsDetails(){
-    this.customerService.getOrderedProducts(this.orderID).subscribe(
+    this.customerService.getOrderedProducts(this.orderId).subscribe(
       res => {
         res.productDtos.forEach(element => {
           element.processedImg = 'data:image/jpeg;base64,' + element.byteImg;
