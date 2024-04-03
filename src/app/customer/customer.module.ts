@@ -9,6 +9,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { ViewOrderedProductsComponent } from './components/view-ordered-products/view-ordered-products.component';
+import { ReviewOrderedProductComponent } from './components/review-ordered-product/review-ordered-product.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ViewOrderedProductsComponent } from './components/view-ordered-products
     CartComponent,
     PlaceOrderComponent,
     MyOrdersComponent,
-    ViewOrderedProductsComponent
+    ViewOrderedProductsComponent,
+    ReviewOrderedProductComponent
   ],
   imports: [
     CommonModule,
