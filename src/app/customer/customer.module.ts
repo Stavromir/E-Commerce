@@ -8,6 +8,7 @@ import { AngularMaterialModul } from 'app/AngularMaterialModul';
 import { CartComponent } from './components/cart/cart.component';
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { ViewOrderedProductsComponent } from './components/view-ordered-products/view-ordered-products.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
     DashboardComponent,
     CartComponent,
     PlaceOrderComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    ViewOrderedProductsComponent
   ],
   imports: [
     CommonModule,
