@@ -1,58 +1,102 @@
-.order-by-status,
-.analytics-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+/* 
+    Styles for the container holding order status component
+*/
+.order-by-status {
+    /* 
+        Centering the component horizontally within its container
+        Adjust according to layout requirements
+    */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add some margin at the bottom */
 }
 
-.analytics-card {
-  width: calc(50% - 20px); // Adjust width as needed
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  background-color: #fff;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  .mat-card-header {
+/* 
+    Styles for the container holding analytics cards
+*/
+.analytics-container {
+    /* 
+        Flex container to display cards in a row
+        Adjust according to layout requirements
+    */
     display: flex;
+    justify-content: space-around;
+}
+
+/* 
+    Styles for each individual analytics card
+*/
+.analytics-card {
+    /* 
+        Fixed width for consistency across cards
+        Adjust according to layout requirements
+    */
+    width: 600px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
 
-    .metric-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #007bff;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      margin-right: 10px;
+    /* Scale up slightly on hover for interaction */
+    &:hover {
+        transform: scale(1.05);
     }
 
-    .mat-card-title {
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-    }
-  }
+    /*
+        Styles for the header section of the card
+    */
+    mat-card-header {
+        padding: 10px; /* Add padding inside the header */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-  .mat-card-content {
-    padding: 10px;
-
-    .metric-value {
-      font-size: 24px;
-      color: #007bff;
+        /*
+            Styles for the avatar (initial) inside the header
+        */
+        .metric-avatar {
+            /* 
+                Circular avatar with fixed width and height
+            */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            font-size: 20px; /* Font size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
-    .metric-subtext {
-      font-size: 14px;
-      color: #777;
+    /*
+        Styles for the content section of the card
+    */
+    mat-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Add padding inside the content */
+
+        /*
+            Styles for the value of the metric (dynamic content)
+        */
+        .metric-value {
+            font-size: 24px; /* Larger font for emphasis */
+            font-weight: bold; /* Bold text for visibility */
+            margin-bottom: 5px; /* Add some space below the value */
+        }
+
+        /*
+            Styles for the subtext of the metric
+        */
+        .metric-subtext {
+            font-size: 14px; /* Smaller font for subtext */
+            color: #666; /* Dimmer color for subtext */
+        }
     }
-  }
 }
