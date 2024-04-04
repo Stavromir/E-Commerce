@@ -80,6 +80,12 @@ export class AdminService {
     })
   }
 
+  getAnalytics(): Observable<any> {
+    return this.http.get(BASIC_URL + '/api/admin/order/analytics', {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
   changeOrderStatus(orderId: any, status: any): Observable<any> {
     return this.http.get(BASIC_URL + `/api/admin/changeStatus/${orderId}/${status}`, {
       headers: this.createAuthorizationHeader(),

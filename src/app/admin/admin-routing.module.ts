@@ -9,6 +9,7 @@ import { CouponsComponent } from './components/coupons/coupons.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { CreateProductFaqComponent } from './components/create-product-faq/create-product-faq.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
+import { AnalyticsComponent } from './components/analytics/analytics.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   // { path: 'faq', component: CreateProductFaqComponent },
   { path: 'faq/:productId', component: CreateProductFaqComponent },
+  { path: 'analytics', component: AnalyticsComponent },
 
 ];
 

@@ -1,0 +1,58 @@
+.order-by-status,
+.analytics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.analytics-card {
+  width: calc(50% - 20px); // Adjust width as needed
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .mat-card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .metric-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #007bff;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .mat-card-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+
+  .mat-card-content {
+    padding: 10px;
+
+    .metric-value {
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    .metric-subtext {
+      font-size: 14px;
+      color: #777;
+    }
+  }
+}
