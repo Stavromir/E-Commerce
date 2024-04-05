@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AdminService } from 'app/admin/service/admin.service';
-import {provideNativeDateAdapter} from '@angular/material/core';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 @Component({
   selector: 'app-post-coupone',
@@ -21,10 +21,10 @@ export class PostCouponeComponent {
     private router: Router,
     private snackBar: MatSnackBar,
     private adminService: AdminService,
-  ){}
+  ) { }
 
 
-  ngOnInit(){
+  ngOnInit() {
     this.couponForm = this.fb.group({
       name: [null, [Validators.required]],
       code: [null, [Validators.required]],
@@ -33,21 +33,21 @@ export class PostCouponeComponent {
     })
   }
 
-  addCoupon(){
-    if(this.couponForm.valid) {
+  addCoupon() {
+    if (this.couponForm.valid) {
       this.adminService.addCoupon(this.couponForm.value).subscribe(
         res => {
-          if(res.id != null) {
-            this.snackBar.open('Coupon add successfully!', 'Close', {duration: 5000});
-            this.router.navigateByUrl('/admin/dashboard')
-          }
+
+          this.snackBar.open('Coupon add successfully!', 'Close', { duration: 5000 });
+          this.router.navigateByUrl('/admin/dashboard')
+
         },
         error => {
           let errorMessage = `${error.status} \ ${error.error.message}`
-          this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
+          this.snackBar.open(errorMessage, 'Clsoe', { duration: 5000 });
         }
       )
-    } else{
+    } else {
       this.couponForm.markAllAsTouched();
     }
   }
