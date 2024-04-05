@@ -69,9 +69,11 @@ export class PostProductComponent {
           if(res.id != null) {
             this.snackBar.open('Product posted successfully', 'Close', {duration: 5000});
             this.router.navigateByUrl('/admin/dashboard');
-          } else {
-            this.snackBar.open(res.message, 'ERROR', {duration: 5000})
           }
+        },
+        (error) => {
+          let errorMessage = `${error.status} \ ${error.error.message}`
+          this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
         }
       )
     } else {

@@ -6,7 +6,7 @@
         <div class="product-details">
             <h2>{{productDto.name}}</h2>
             <p class="description">Description: {{productDto.description}}</p>
-            <p class="price">Price: {{productDto.price}}</p>
+            <p class="price">Price: {{productDto.price | currency}}</p>
             <p class="category">Category: {{productDto.categoryName}}</p>
             <p class="wishlist"> Add to wishlist:
                 <mat-icon class="heart-icon" (click)="addProductToWishList()"

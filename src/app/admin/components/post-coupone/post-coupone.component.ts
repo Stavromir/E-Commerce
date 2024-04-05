@@ -40,9 +40,11 @@ export class PostCouponeComponent {
           if(res.id != null) {
             this.snackBar.open('Coupon add successfully!', 'Close', {duration: 5000});
             this.router.navigateByUrl('/admin/dashboard')
-          } else {
-            this.snackBar.open(res.message, 'Close', {duration: 5000, panelClass: 'error-snackbar'});
           }
+        },
+        error => {
+          let errorMessage = `${error.status} \ ${error.error.message}`
+          this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
         }
       )
     } else{

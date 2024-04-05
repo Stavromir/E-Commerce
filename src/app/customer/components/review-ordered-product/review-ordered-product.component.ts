@@ -47,21 +47,23 @@ export class ReviewOrderedProductComponent {
     reader.readAsDataURL(this.selectedFile);
   }
 
-  submitForm(){
+  submitForm(): void{
     const formData: FormData = new FormData;
-    formData.append('img', this.selectedFile);
+    if(this.selectedFile) {
+      formData.append('img', this.selectedFile);
+    }
     formData.append('productId', this.productId.toString());
     formData.append('userId', UserStorageService.getUserId());
     formData.append('rating', this.reviewForm.get('rating').value);
     formData.append('description', this.reviewForm.get('description').value);
 
     this.customerService.placeRevie(formData).subscribe(
-      res => {
+      (res) => {
         this.snackBar.open('Review added successfully', 'Close', {duration: 5000});
         this.router.navigateByUrl('/customer/ordered_products/' + this.orderId);
 
       },
-      error => {
+      (error) => {
         let errorMessage = `${error.status} \ ${error.error}`
         this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
       }

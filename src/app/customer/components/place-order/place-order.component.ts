@@ -39,7 +39,7 @@ export class PlaceOrderComponent {
             this.router.navigateByUrl('/customer/myOrders');  
       }, 
       error => {
-        let errorMessage = `${error.status} \ ${error.error}`
+        let errorMessage = `${error.status} \ ${error.error.message}`
         this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
       }
     )

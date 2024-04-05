@@ -68,7 +68,7 @@ export class UpdateProductComponent {
         this.existingImage = 'data:image/jpeg;base64,' + res.byteImg;
       },
       error => {
-        let errorMessage = `${error.status} \ ${error.error}`
+        let errorMessage = `${error.status} \ ${error.error.message}`
         this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000})
       }
     )
@@ -95,7 +95,7 @@ export class UpdateProductComponent {
             this.router.navigateByUrl('/admin/dashboard');
         },
         error => {
-          let errorMessage = `${error.status} \ ${error.error}`
+          let errorMessage = `${error.status} \ ${error.error.message}`
           this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000})
         }
       )

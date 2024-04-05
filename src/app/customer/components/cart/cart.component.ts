@@ -37,13 +37,13 @@ export class CartComponent {
   applyCoupon(){
     this.customerService.applyCoupon(this.couponForm.get(['code'])!.value).subscribe(
       res => {
-        if(res.id != null) {
           this.snackBar.open("Coupon applied successfully!", 'Close', {duration: 5000});
           this.getCart();
-        } else {
-          this.snackBar.open(res.message, 'ERROR', {duration: 5000})
-        }
-      } 
+        },
+      error => {
+        let errorMessage = `${error.status} \ ${error.error.message}`
+        this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
+      }       
     )
   }
 

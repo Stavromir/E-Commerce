@@ -11,15 +11,15 @@ import { CustomerService } from 'app/customer/services/customer.service';
 export class DashboardComponent {
 
   products: any[] = [];
-  searchProductForm!:  FormGroup;
+  searchProductForm!: FormGroup;
 
   constructor(
     private customerService: CustomerService,
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
-  ) {}
+  ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getAllProducts();
     this.searchProductForm = this.fb.group({
       title: [null, [Validators.required]]
@@ -38,7 +38,7 @@ export class DashboardComponent {
     )
   }
 
-  submitForm(){
+  submitForm() {
     this.products = [];
     const title = this.searchProductForm.get('title')!.value;
     this.customerService.getAllProductsByName(title).subscribe(
@@ -54,9 +54,12 @@ export class DashboardComponent {
   addToCart(productId: any) {
     this.customerService.addToCart(productId).subscribe(
       res => {
-        this.snackBar.open('Product added to cart successfully', 'Close', {duration: 5000});
+          this.snackBar.open('Product added to cart successfully', 'Close', { duration: 5000 });
+      },
+      error => {
+        let errorMessage = `${error.status} \ ${error.error.message}`
+        this.snackBar.open(errorMessage, 'Clsoe', {duration: 5000});
       }
     )
-    
   }
 }

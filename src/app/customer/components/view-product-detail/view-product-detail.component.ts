@@ -38,7 +38,7 @@ export class ViewProductDetailComponent {
         this.snackbar.open('Product added to wishlist seccessfully', 'Close', {duration: 5000});
       },
       error => {
-        let errorMessage = `${error.status} \ ${error.error}`
+        let errorMessage = `${error.status} \ ${error.error.message}`
         this.snackbar.open(errorMessage, 'Clsoe', {duration: 5000});
       }
     )
@@ -58,7 +58,7 @@ export class ViewProductDetailComponent {
           this.snackbar.open('Successfully load product', 'Close', {duration: 5000})
       },
       error => {
-        let errorMessage = `${error.status} \ ${error.error}`
+        let errorMessage = `${error.status} \ ${error.error.message}`
         this.snackbar.open(errorMessage, 'Clsoe', {duration: 5000});
       }
     )
