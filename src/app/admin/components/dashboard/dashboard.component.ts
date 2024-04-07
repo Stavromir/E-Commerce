@@ -54,7 +54,6 @@ export class DashboardComponent {
   deleteProduct(productId: any) {
     this.adminService.deleteProduct(productId).subscribe(
       res => {
-        
           this.snackBar.open('Product Deleted Successfully', 'Close', {duration: 5000});
           this.getAllProducts();
         },
