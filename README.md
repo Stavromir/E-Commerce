@@ -82,7 +82,7 @@ Let's take a quick tour of my site's key features:
 
 ### 5. Admin Dashboard
 
-![AdminDashboard](src/resources/png/AdminDasboard.png)
+![AdminDashboard](src/resources/png/AdminDashboard.png)
 
 - Admins can access the dashboard to manage products, orders, and view analytics.
 
