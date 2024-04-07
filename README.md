@@ -60,3 +60,14 @@ Let's take a quick tour of my site's key features:
 - By clicking on a product, user can view detailed information, including descriptions, QA and customer reviews.
 - Add items to your wishlist directly from this page.
 
+### 3. Checkout Process
+
+![UserCart01](src/resources/png/UserCart01.png)
+![UserCart02](src/resources/png/UserCart02.png)
+![UserCart03](src/resources/png/UserCart03.png)
+
+- User can use discount coupon.
+- Proceed to checkout seamlessly with our streamlined process.
+
+
+
