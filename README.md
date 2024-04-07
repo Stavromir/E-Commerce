@@ -55,7 +55,7 @@ Let's take a quick tour of my site's key features:
 ### 2. Product Details
 
 ![UserProduct.png](src/resources/png/UserProduct.png)
-![ReviewFAQ.png](src/resources/png/UserProduct.png)
+![ReviewFAQ.png](src/resources/png/ReviewFAQ.png)
 
 - Click on a product to view detailed information, including descriptions, QA and customer reviews.
 - Add items to your wishlist directly from this page.
