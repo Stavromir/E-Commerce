@@ -74,5 +74,12 @@ Let's take a quick tour of my site's key features:
 
 - Proceed to checkout seamlessly with our streamlined process.
 
+### 4. Order details
+
+![UserOrders](src/resources/png/UserOrders.png)
+
+- User can see order details and traking number.
+
+
 
 
