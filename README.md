@@ -63,10 +63,10 @@ Let's take a quick tour of my site's key features:
 ### 3. Checkout Process
 
 ![UserCart01](src/resources/png/UserCart01.png)
+- User can use discount coupon.
 ![UserCart02](src/resources/png/UserCart02.png)
 ![UserCart03](src/resources/png/UserCart03.png)
 
-- User can use discount coupon.
 - Proceed to checkout seamlessly with our streamlined process.
 
 
