@@ -8,11 +8,16 @@ E-Commerce Angular Project is a full-fledged e-commerce solution designed to pro
 
 ## 🚀 Features
 
+- **ADMIN PORTAL**: Add, edit or delete products, categories and coupons. Manage orders and view analytics.
 - **Product Listing**: Browse through a wide range of products.
 - **Search & Filter**: Find products quickly using the search bar.
 - **User Authentication**: In this Angular project, we utilize JSON Web Tokens (JWT) for secure authentication and authorization purposes.
 - **Shopping Cart**: Add products to the cart and manage them before proceeding to checkout.
 - **Checkout Process**: Smooth and intuitive checkout process.
+
+## Libraries/Frameworks Used
+
+- **Angular Material**: Utilized for UI components and theming across the application. This includes components like buttons, cards, forms, dialogs, and more.
 
 ## 🔒 JWT Token Implementation
 
