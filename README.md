@@ -41,7 +41,7 @@ E-Commerce Angular Project is a full-fledged e-commerce solution designed to pro
 - **Scalability**: With stateless authentication, our application can easily scale horizontally since any server can validate JWT tokens without relying on centralized session management.
 - **Security**: JWT tokens are digitally signed, ensuring data integrity and preventing tampering. Additionally, they can be encrypted for added security.
 
-## Short Trip through pages
+## 🧳 Short Trip through pages
 
 Let's take a quick tour of my site's key features:
 
@@ -79,6 +79,21 @@ Let's take a quick tour of my site's key features:
 ![UserOrders](src/resources/png/UserOrders.png)
 
 - User can see order details and traking number.
+
+### 5. Admin Dashboard
+
+![AdminDashboard](src/resources/png/AdminDasboard.png)
+
+- Admins can access the dashboard to manage products, orders, and view analytics.
+
+![AdminProduct](src/resources/png/AdminProduct.png)
+
+- Place new product.
+
+![AdminOrders](src/resources/png/AdminOrders.png)
+
+- View and process orders.
+
 
 
 
