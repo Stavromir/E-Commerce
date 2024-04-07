@@ -65,9 +65,11 @@ Let's take a quick tour of my site's key features:
 ![UserCart01](src/resources/png/UserCart01.png)
 
 - User can use discount coupon.
+
 ![UserCart02](src/resources/png/UserCart02.png)
 
 - Place order button to proceed forward.
+
 ![UserCart03](src/resources/png/UserCart03.png)
 
 - Proceed to checkout seamlessly with our streamlined process.
