@@ -94,6 +94,10 @@ Let's take a quick tour of my site's key features:
 
 - View and process orders.
 
+![AdminAnalytics](src/resources/png/AdminAnalytics.png)
+
+- View analytics.
+
 
 
 
