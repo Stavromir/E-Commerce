@@ -50,5 +50,13 @@ Let's take a quick tour of my site's key features:
 ![UserDashboard.png](src/resources/png/UserDashboard.png)
 
 - Dashboard welcomes visitors with a clean and intuitive interface.
-- All placed products can be showcased here.
+- All placed products can be showcased here. User can search through all product by product name.
+
+### 2. Product Details
+
+![UserProduct.png](src/resources/png/UserProduct.png)
+![ReviewFAQ.png](src/resources/png/UserProduct.png)
+
+- Click on a product to view detailed information, including descriptions, QA and customer reviews.
+- Add items to your wishlist directly from this page.
 
