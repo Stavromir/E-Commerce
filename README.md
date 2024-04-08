@@ -64,7 +64,7 @@ Let's take a quick tour of my site's key features:
 
 ![UserCart01](src/resources/png/UserCart01.png)
 
-- User can use discount coupon.
+- User can apply discount coupon.
 
 ![UserCart02](src/resources/png/UserCart02.png)
 
