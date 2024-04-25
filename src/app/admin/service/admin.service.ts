@@ -75,19 +75,19 @@ export class AdminService {
   }
 
   getAllOrders(): Observable<any> {
-    return this.http.get(BASIC_URL + '/api/admin/placedOrders', {
+    return this.http.get(BASIC_URL + '/api/admin/orders', {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getAnalytics(): Observable<any> {
-    return this.http.get(BASIC_URL + '/api/admin/order/analytics', {
+    return this.http.get(BASIC_URL + '/api/admin/analytics', {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   changeOrderStatus(orderId: any, status: any): Observable<any> {
-    return this.http.get(BASIC_URL + `/api/admin/changeStatus/${orderId}/${status}`, {
+    return this.http.get(BASIC_URL + `/api/admin/orders/${orderId}/${status}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
