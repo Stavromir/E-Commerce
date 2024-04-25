@@ -30,7 +30,14 @@ export class CustomerService {
   }
 
   getAllProductsByName(name: any): Observable<any> {
-    return this.http.get(BASIC_URL + `/api/customer/products/${name}`, {
+    return this.http.get(BASIC_URL + `/api/customer/products/title/${name}`, {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  getOrderedProducts(orderId: number): Observable<any> {
+    
+    return this.http.get(BASIC_URL + `/api/customer/products/order/${orderId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -89,13 +96,6 @@ export class CustomerService {
   getPlacedOrders(): Observable<any> {
     const userId = UserStorageService.getUserId()
     return this.http.get(BASIC_URL + `/api/customer/orders/${userId}`, {
-      headers: this.createAuthorizationHeader(),
-    })
-  }
-
-  getOrderedProducts(orderId: number): Observable<any> {
-    
-    return this.http.get(BASIC_URL + `/api/customer/products/${orderId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }

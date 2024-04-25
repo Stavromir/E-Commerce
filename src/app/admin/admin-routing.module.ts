@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'category', component: PostCategoryComponent },
   { path: 'product', component: PostProductComponent },
-  { path: 'product/:productId', component: UpdateProductComponent },
+  { path: 'products/:productId', component: UpdateProductComponent },
   { path: 'post-coupon', component: PostCouponeComponent },
   { path: 'coupons', component: CouponsComponent },
   { path: 'orders', component: OrdersComponent },
