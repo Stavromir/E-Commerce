@@ -25,7 +25,7 @@ export class AdminService {
   }
 
   addProduct(productDto:any): Observable<any> {
-    return this.http.post(BASIC_URL + '/api/admin/product', productDto, {
+    return this.http.post(BASIC_URL + '/api/admin/products', productDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -33,7 +33,7 @@ export class AdminService {
   updateProduct(productDto:any, productId: any): Observable<any> {
     const id = productId;
     productDto.id = id;
-    return this.http.put(BASIC_URL + '/api/admin/product/update', productDto, {
+    return this.http.put(BASIC_URL + '/api/admin/products', productDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -45,19 +45,19 @@ export class AdminService {
   }
 
   getProductsById(productId: number): Observable<any> {
-    return this.http.get(BASIC_URL + `/api/admin/product/${productId}`, {
+    return this.http.get(BASIC_URL + `/api/admin/products/${productId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getAllProductsByName(name: any): Observable<any> {
-    return this.http.get(BASIC_URL + `/api/admin/search/${name}`, {
+    return this.http.get(BASIC_URL + `/api/admin/products/${name}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   deleteProduct(productId:any): Observable<any> {
-    return this.http.delete(BASIC_URL + `/api/admin/product/${productId}`, {
+    return this.http.delete(BASIC_URL + `/api/admin/products/${productId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -94,7 +94,7 @@ export class AdminService {
 
   createFAQ(faqDto: any, productId: number): Observable<any> {
     faqDto.productId = productId;
-    return this.http.post(BASIC_URL + `/api/admin/faq`, faqDto, {
+    return this.http.post(BASIC_URL + `/api/admin/faqs`, faqDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
