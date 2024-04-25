@@ -24,13 +24,13 @@ export class CustomerService {
   }
 
   getProductDetails(productId: number): Observable<any> {
-    return this.http.get(BASIC_URL + `/api/customer/product/${productId}`, {
+    return this.http.get(BASIC_URL + `/api/customer/products/${productId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getAllProductsByName(name: any): Observable<any> {
-    return this.http.get(BASIC_URL + `/api/customer/search/${name}`, {
+    return this.http.get(BASIC_URL + `/api/customer/products/${name}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -40,7 +40,7 @@ export class CustomerService {
       productId: productId,
       userId: UserStorageService.getUserId()
     }
-    return this.http.post(BASIC_URL + '/api/customer/cart', cartDto, {
+    return this.http.post(BASIC_URL + '/api/customer/carts', cartDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -50,7 +50,7 @@ export class CustomerService {
       productId: productId,
       userId: UserStorageService.getUserId()
     }
-    return this.http.post(BASIC_URL + '/api/customer/addition', cartDto, {
+    return this.http.post(BASIC_URL + '/api/customer/carts/addition', cartDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
@@ -60,61 +60,61 @@ export class CustomerService {
       productId: productId,
       userId: UserStorageService.getUserId()
     }
-    return this.http.post(BASIC_URL + '/api/customer/subtraction', cartDto, {
+    return this.http.post(BASIC_URL + '/api/customer/carts/subtraction', cartDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getCartByUserId(): Observable<any> {
     const userId = UserStorageService.getUserId()
-    return this.http.get(BASIC_URL + `/api/customer/cart/${userId}`, {
+    return this.http.get(BASIC_URL + `/api/customer/carts/${userId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   applyCoupon(code: any): Observable<any> {
     const userId = UserStorageService.getUserId()
-    return this.http.get(BASIC_URL + `/api/customer/coupon/${userId}/${code}`, {
+    return this.http.get(BASIC_URL + `/api/customer/coupons/${userId}/${code}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   placeOrder(orderDto: any): Observable<any> {
     orderDto.userId = UserStorageService.getUserId()
-    return this.http.post(BASIC_URL + `/api/customer/placeOrder`, orderDto, {
+    return this.http.post(BASIC_URL + `/api/customer/orders`, orderDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getPlacedOrders(): Observable<any> {
     const userId = UserStorageService.getUserId()
-    return this.http.get(BASIC_URL + `/api/customer/myOrders/${userId}`, {
+    return this.http.get(BASIC_URL + `/api/customer/orders/${userId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getOrderedProducts(orderId: number): Observable<any> {
     
-    return this.http.get(BASIC_URL + `/api/customer/ordered-products/${orderId}`, {
+    return this.http.get(BASIC_URL + `/api/customer/products/${orderId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   placeRevie(reviewDto: any): Observable<any> {
-    return this.http.post(BASIC_URL + `/api/customer/review`, reviewDto, {
+    return this.http.post(BASIC_URL + `/api/customer/reviews`, reviewDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   addProductToWishList(wishListDto: any): Observable<any> {
-    return this.http.post(BASIC_URL + `/api/customer/wishlist`, wishListDto, {
+    return this.http.post(BASIC_URL + `/api/customer/wishlists`, wishListDto, {
       headers: this.createAuthorizationHeader(),
     })
   }
 
   getToWishList(): Observable<any> {
     const userId = UserStorageService.getUserId();
-    return this.http.get(BASIC_URL + `/api/customer/wishlist/${userId}`, {
+    return this.http.get(BASIC_URL + `/api/customer/wishlists/${userId}`, {
       headers: this.createAuthorizationHeader(),
     })
   }
